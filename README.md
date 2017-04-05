@@ -1,7 +1,7 @@
 # twobytwo 
 
 #### twobytwo helps generate your very own Two-by-Two diagrams.
-(mostly meant to work on mobile so I can generate them on the fly.)
+(mostly meant to work on mobile so I can generate them on the fly, whenever inspiration strikes)
 
 https://dantaeyoung.github.io/twobytwo
 
