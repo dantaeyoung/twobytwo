@@ -1,4 +1,5 @@
 *.swp
 *.sass-cache
 config.codekit
+bower_components
 js/min

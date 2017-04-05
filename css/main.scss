@@ -19,8 +19,10 @@ html {
 }
 
 body {
-  font-family: 'n-bold', 'Dosis', sans-serif;
-	letter-spacing: -0.02em;
+  font-family: 'Neuzeit-Book', 'Dosis', sans-serif;
+	@media only screen and (max-device-width: 480px) {
+		letter-spacing: -0.03em;
+	}
   margin: 0;
   padding: 0;
 }
@@ -134,8 +136,7 @@ $tbtpad: 35vmin;
 }
 
 .axislabel {
-  font-family: 'n-book', 'Dosis', sans-serif;
-  font-weight: 400 !important;
+  font-family: 'Neuzeit-Book', 'Dosis', sans-serif;
 
   &.xaxis {
     width: calc((#{$tbtpad} / 2) - 1vmin);
@@ -192,7 +193,7 @@ textarea.editable {
 $qlpad: 8vmin;
 
 .quadwrap {
-  font-family: 'n-bold', 'Dosis', sans-serif;
+  font-family: 'Neuzeit-Heavy', 'Dosis', sans-serif;
   color:  $textcolor;
 	padding: calc(#{$qlpad} / 2 );
   height: calc(50% - (#{$qlpad} * 2));

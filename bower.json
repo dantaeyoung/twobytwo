@@ -1,0 +1,25 @@
+{
+  "name": "twobytwo",
+  "homepage": "https://github.com/dantaeyoung/twobytwo",
+  "authors": [
+    "Dan Taeyoung <provolot@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.boxfit": "^1.2.4",
+    "jquery": "^3.2.1",
+    "file-saver": "FileSaver#^1.3.3",
+    "html2canvas": "https://github.com/eKoopmans/html2canvas.git#c903e6fb348fec7db253481c16e811cb55f124f0",
+    "jQuery.editable": "jquery.editable#^1.1.2",
+    "canvas-toBlob": "https://github.com/eligrey/canvas-toBlob.js.git"
+  }
+}

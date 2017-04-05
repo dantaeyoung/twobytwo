@@ -37,21 +37,27 @@ table {
 
 /* NEUZEIT */
 @font-face {
-  font-family: 'n-book';
-  src: url("../assets/NeuzeitSLTStd-Book.otf");
-  src: url("../assets/NeuzeitSLTStd-Book.woff") format("woff"); }
+  font-family: 'Neuzeit-Book';
+  src: url("../assets/fonts/subset-NeuzeitSLTStd-Book.eot");
+  src: url("../assets/fonts/subset-NeuzeitSLTStd-Book.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-NeuzeitSLTStd-Book.woff2") format("woff2"), url("../assets/fonts/subset-NeuzeitSLTStd-Book.woff") format("woff"), url("../assets/fonts/subset-NeuzeitSLTStd-Book.ttf") format("truetype"), url("../assets/fonts/subset-NeuzeitSLTStd-Book.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
-  font-family: 'n-bold';
-  src: url("../assets/NeuzeitSLTStd-BookHeavy.otf");
-  src: url("../assets/NeuzeitSLTStd-BookHeavy.woff") format("woff"); }
+  font-family: 'Neuzeit-Heavy';
+  src: url("../assets/fonts/subset-NeuzeitSLTStd-BookHeavy.eot");
+  src: url("../assets/fonts/subset-NeuzeitSLTStd-BookHeavy.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/subset-NeuzeitSLTStd-BookHeavy.woff2") format("woff2"), url("../assets/fonts/subset-NeuzeitSLTStd-BookHeavy.woff") format("woff"), url("../assets/fonts/subset-NeuzeitSLTStd-BookHeavy.ttf") format("truetype"), url("../assets/fonts/subset-NeuzeitSLTStd-BookHeavy.svg#Montserrat-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 html {
   background: white; }
 
 body {
-  font-family: 'n-bold', 'Dosis', sans-serif;
-  letter-spacing: -0.02em;
+  font-family: 'Neuzeit-Book', 'Dosis', sans-serif;
   margin: 0;
   padding: 0; }
+  @media only screen and (max-device-width: 480px) {
+    body {
+      letter-spacing: -0.03em; } }
 
 #wrapper {
   background-color: white;
@@ -137,8 +143,7 @@ button {
     overflow-wrap: break-word; }
 
 .axislabel {
-  font-family: 'n-book', 'Dosis', sans-serif;
-  font-weight: 400 !important; }
+  font-family: 'Neuzeit-Book', 'Dosis', sans-serif; }
   .axislabel.xaxis {
     width: calc((35vmin / 2) - 1vmin); }
 
@@ -181,7 +186,7 @@ textarea.editable {
   text-align: inherit; }
 
 .quadwrap {
-  font-family: 'n-bold', 'Dosis', sans-serif;
+  font-family: 'Neuzeit-Heavy', 'Dosis', sans-serif;
   color: #1a1a1a;
   padding: calc(8vmin / 2 );
   height: calc(50% - (8vmin * 2));
