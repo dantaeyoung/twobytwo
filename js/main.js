@@ -30,6 +30,18 @@ function saveAsImage(div, filename) {
     });
 }
 
+function getCenter(el) {
+  var $this = $(el);
+  var offset = $this.offset();
+  var width = $this.width();
+  var height = $this.height();
+
+  var centerX = offset.left + width / 2;
+  var centerY = offset.top + height / 2;
+  return { x: centerX, y: centerY };
+}
+
+window.gc = getCenter;
 
 $(function() {
 
