@@ -23,7 +23,7 @@ html {
 body {
   font-family: 'Neuzeit-Book', Arial, sans-serif;
   @media only screen and (max-device-width: 480px) {
-    letter-spacing: -0.03em;
+    letter-spacing: -0.00em;
   }
   margin: 0;
   padding: 0;
@@ -75,14 +75,16 @@ button {
 #colortoggle {
 }
 
+$qhpad: 8vmin;
+
 .quiz_header {
   font-size: calc(0.5em + 1vmin);
 
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 100%;
-  padding: 5vmin 0px;
+  width: calc(100% - #{$qhpad});
+  padding: 5vmin calc(#{$qhpad} / 2);
 
   text-align: center;
   color: $gridtext;
@@ -95,7 +97,8 @@ button {
 
   #quiz_description {
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 0.8em;
+    line-height: 1.2em;
   }
 }
 
@@ -105,7 +108,8 @@ $tbtpad: 35vmin;
   position: relative;
   width: calc(94vmin - #{$tbtpad});
   height: calc(94vmin - #{$tbtpad});
-  border: 4px solid black;
+  border: 5px solid black;
+  border-radius: 10px;
   background-color: $gridback;
   padding: calc(#{$tbtpad} / 2);
   @media screen and (min-width: 500px) {
