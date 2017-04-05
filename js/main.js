@@ -16,7 +16,9 @@ function updateUrlWithData() {
     savedata[el.id] = el.innerHTML;
   });
   var url = location.protocol + '//' + location.host + location.pathname;
-  history.replaceState('', '', url + "?" +  $.param(savedata));
+  var dataUrl = url + "?" +  $.param(savedata);
+  history.replaceState('', '', dataUrl);
+  return dataUrl;
 }
 
 function saveAsImage(div, filename) {
@@ -63,7 +65,7 @@ $(function() {
 
   new Clipboard("#copyurl", {
     text: function(trigger) {
-      return location.href;
+      return updateUrlWithData()
     }
   });
 
