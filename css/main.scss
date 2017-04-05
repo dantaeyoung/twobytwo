@@ -18,126 +18,15 @@ body {
   padding: 0;
 }
 
+
 #wrapper {
-  padding: 50px 20px;
-  max-width: 700px;
-  margin: auto;
-}
-
-#personalityquiz {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.question {
-  margin: 10px;
-  padding: 15px 0px 35px 0px;
-  border-bottom: 2px solid #efefef;
-  & .statement {
-    display:block {}
-    font-size: 1.1em;
-    font-weight: bold;
-    line-height: 1.5em;
-    padding: 10px 0 5px 0;
-    margin: 5px 0px;
-  }
-  & .options {
-    font-weight: normal;
-    font-size: 0.8em;
-  }
-  li label {
-    padding: 5px 8px;
-    border-radius: 4px;
-    margin: -5px -4px;
-  }
-}
-
-.options input:checked + label {
-  background-color: $highlightcolor;
-  z-index: 20;
-  font-weight: bold;
-}
-
-input[type='text']:valid {
-  background-color: $highlightcolor;
-}
-
-.text_question {
-  input {
-    font-weight: bold;
-    font-size: 1.5em;
-    border-radius: 10px;
-    padding: 10px;
-    width: calc(100% - 20px);
-  }
-}
-
-.multiple_choice_question {
-  li {
-    margin-left: 20px;
-    label {
-      margin-left: 10px;
-    }
-  }
-}
-
-.likert_question {
-  & .options {
-    list-style: none;
-    text-align: center;
-    width: 100%;
-    margin: 10px 0px 0px 0px;
-    padding: 0 0 15px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-
-    --barwidth: 80%;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 7px;
-      width: calc(var(--barwidth));
-      left: calc((100% - var(--barwidth)) / 2);
-      display: block;
-      background-color: #efefef;
-      height: 4px;
-    }
-  }
-  & .options li {
-    z-index: 10;
-    width: calc((var(--barwidth) / 4));
-    text-align: center;
-    vertical-align: top;
-    &.xwider {
-      width: var(--widerwidth);
-    }
-    & label {
-      width: 100%;
-      display: block;
-    }
-    & input {
-      display: inline-block;
-    }
-  }
-}
-
-#cancelconfirmmenu {
-  margin: 40px 0px;
-  background-color: darken($backgc, 20%);
-  flex-direction: row;
-  display: flex;
-  border-radius: 10px;
-}
-
-#cancelconfirmmenu button {
-  flex-grow: 1;
-  height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ vertical-align: middle;	
+ justify-content: center;
+ height: 100vh;
+ width: 100vw;
 }
 
 button {
@@ -153,19 +42,7 @@ button {
   color: darken($backgc, 30%);
   border-right: 2px solid darken($buttonbc, 30%);
   border-bottom: 2px solid darken($buttonbc, 30%);
-  &#confirm {
-    background-color: lighten($highlightcolor, 2%);
-  }
-  &#cancel {
-    background-color: lighten($backgc, 3%);
-  }
-  &[disabled=disabled], &:disabled {
-    font-weight: normal;
-    border-right: 2px solid darken($lightgrey, 40%);
-    border-bottom: 2px solid darken($lightgrey, 40%);
-    color: darken($lightgrey, 30%);
-    background-color: $lightgrey !important;
-  }
+
   &:active {
     border-left: 2px solid darken($lightgrey, 40%);
     border-top: 2px solid darken($lightgrey, 40%);
@@ -176,28 +53,10 @@ button {
   }
 }
 
-#postquestions {
-  z-index: 1000;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: darken($backgc, 10%);
-}
-
-#pqwrapper {
-  font-weight: bold;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .quiz_header {
+
+  padding: 20px 0px;
 
   text-align: center;
   color: $textcolor;
@@ -214,39 +73,45 @@ button {
   }
 }
 
-#personname {
-  font-weight: bold;
+$tbtpad: 40vmin;
+
+#twobytwo_wrapper {
+  width: calc(95vmin - #{$tbtpad});
+  height: calc(95vmin - #{$tbtpad});
+  border: 1px dotted blue;
+  padding: calc(#{$tbtpad} / 2);
 }
 
-#twobytwo {
-  background: url('../assets/two_by_two_arrows.svg') no-repeat;
-  background-color: white;
-  width: 500px;
-  height: 500px;
-  max-height: calc(70vw - 70px);
-  max-width: calc(70vw - 70px);
+#grid {
+  width: 100%;
+  height: 100%;
   position: relative;
-  border: 80px solid white;
   border-radius: 10px;
-  .mark {
+
+  & #gridgraphic {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    background: url('../assets/two_by_two_arrows.svg') no-repeat;
+  }
+
+  .label {
     font-weight: 700 !important;
     color:  $textcolor !important;
     position: absolute;
 		line-height: 1.1em;
+    overflow-wrap: break-word;
   }
 
-
-  #results {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: -7px;
-    left: -5px;
-  }
 }
 
 .axislabel {
-  position: relative;
+
+  &.xaxis {
+    width: calc((#{$tbtpad} / 2) - 1vmin);
+  }
 }
 
 .alignleft {
@@ -257,20 +122,6 @@ button {
 	}
 }
 
-#results {
-  display: table;
-}
-.alignvcenter {
-	height: 50%;
-	width: 100px;
-	margin-top: -25%;
-	display: flex;
-  flex-direction: column;
-	vertical-align: middle;	
-  justify-content: center;
-
-}
-
 .alignright {
 	text-align: right;
 	 & textarea  {
@@ -279,12 +130,21 @@ button {
 		right: -9px;
 	}
 }
-.aligncenter {
+.alignvcenter {
+	height: 100%;
+	margin-top: -50%;
+	display: flex;
+  flex-direction: column;
+	vertical-align: middle;	
+  justify-content: center;
+}
+
+.alignhcenter {
 	text-align: center;
 
 	&.axislabel {
-		width: 50%;
-		margin-left: -23%;
+		width: 100%;
+		margin-left: -50%;
 		& textarea  {
 			text-align: center;
 			top: -3px;
@@ -294,25 +154,30 @@ button {
 } 
 
 textarea.editable {
+  margin: 0px;
   position: relative;
   font-family: 'Dosis', sans-serif;
   font-weight: 700;
   background-color : #FFA;
   padding : 3px;
-  width: 20px;
 }
 
-.quadrantlabel {
-  
-  flex-wrap: wrap;
+$qlpad: 3vmin;
+
+.quadwrap {
 	border: 1px dotted red;
-	padding: 5px;
-	height: calc(50% - 10px);
-	width: calc(50% - 10px);
-	display: table-cell;
-	vertical-align: middle;	
+  margin: -1px;
+	padding: calc(#{$qlpad} / 2 );
+  height: calc(50% - (#{$qlpad}));
+  width: calc(50% - (#{$qlpad}));
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.quadinner {
+  width: 100%;
 }
 
 .alignvtop {

@@ -11,26 +11,25 @@
   </head>
   <body>
 		<div id="wrapper">
-      <div id="postquestions"><div id="pqwrapper">
-        <div class="quiz_header">
-          <div id="quiz_title" class="editableelem aligncenter">Two by Two Title</div>
-          <div id="quiz_description" class="editableelem aligncenter">Two by Two description</div>
-        </div>
-        <div id = "twobytwo">
-          <div id="results">
-            <div id="axis_xmin" class="mark axislabel editableelem alignvcenter alignright" style="right: 102%; top: 54%">xmin</div>
-            <div id="axis_xmax" class="mark axislabel editableelem alignvcenter alignleft" style="left: 105%; top: 54%">xmax</div>
-            <div id="axis_ymin" class="mark axislabel editableelem aligncenter" style="left: 50%; top: 103%">ymin</div>
-            <div id="axis_ymax" class="mark axislabel editableelem aligncenter" style="left: 50%; bottom: 100%">ymax</div>
+      <div class="quiz_header">
+        <div id="quiz_title" class="editableelem alignhcenter">Two by Two Title</div>
+        <div id="quiz_description" class="editableelem alignhcenter">Two by Two description</div>
+      </div>
+      <div id = "twobytwo_wrapper">
+        <div id="grid">
+          <div id="gridgraphic"></div>
+          <div id="axis_xmin" class="label axislabel editableelem xaxis alignvcenter alignright" style="right: 100%; top: 50%">xmin</div>
+          <div id="axis_xmax" class="label axislabel editableelem xaxis alignvcenter alignleft" style="left: 100%; top: 50%">xmax</div>
+          <div id="axis_ymin" class="label axislabel editableelem alignhcenter" style="left: 50%; top: 100%">ymin</div>
+          <div id="axis_ymax" class="label axislabel editableelem alignhcenter" style="left: 50%; bottom: 100%">ymax</div>
 
-            <div id="quadrant_xminymin" class="mark quadrantlabel editableelem alignvbottom alignright" style="left: 1%; top: 53%">xmin</div>
-            <div id="quadrant_xmaxymin" class="mark quadrantlabel editableelem alignvbottom alignleft" style="left: 52%; top: 53%">xmax</div>
-            <div id="quadrant_xminymax" class="mark quadrantlabel editableelem alignvtop alignright" style="left: 1%; top: 1%">ymin</div>
-            <div id="quadrant_xmaxymax" class="mark quadrantlabel editableelem alignvtop alignleft" style="left: 52%; top: 1%">ymax</div>
-          </div>
+          <div id="quadrant_xminymin_wrap" class="label quadwrap" style="left: 0%; top: 50%"><div id="quadrant_xminymin" class="editableelem quadinner alignright">xminymin</div></div>
+          <div id="quadrant_xmaxymin_wrap" class="label quadwrap" style="left: 50%; top: 50%"><div id="quadrant_xmaxymin" class="editableelem quadinner alignleft">xmaxymin</div></div>
+          <div id="quadrant_xminymax_wrap" class="label quadwrap" style="left: 0%; top: 0%"><div id="quadrant_xminymax" class="editableelem quadinner alignright">xminymax</div></div>
+          <div id="quadrant_xmaxymax_wrap" class="label quadwrap" style="left: 50%; top: 0%"><div id="quadrant_xmaxymax" class="editableelem quadinner alignleft">xmaxymax</div></div>
         </div>
-        <button id="saveas">Save as a link</button>
-      </div></div>
+      </div>
+      <button id="saveas">Save as a link</button>
 		</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
