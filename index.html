@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet"> 
     <link href="css/main.css" rel="stylesheet"> 
 
@@ -17,16 +17,16 @@
       </div>
       <div id = "twobytwo_wrapper">
         <div id="grid">
-          <div id="gridgraphic"></div>
+          <div id="gridgraphic"><img src="assets/two_by_two_arrows.svg" /></div>
           <div id="axis_xmin" class="label axislabel editableelem xaxis alignvcenter alignright" style="right: 100%; top: 50%">xmin</div>
           <div id="axis_xmax" class="label axislabel editableelem xaxis alignvcenter alignleft" style="left: 100%; top: 50%">xmax</div>
           <div id="axis_ymin" class="label axislabel editableelem alignhcenter" style="left: 50%; top: 100%">ymin</div>
           <div id="axis_ymax" class="label axislabel editableelem alignhcenter" style="left: 50%; bottom: 100%">ymax</div>
 
-          <div id="quadrant_xminymin_wrap" class="label quadwrap" style="left: 0%; top: 50%"><div id="quadrant_xminymin" class="editableelem quadinner alignright">xminymin</div></div>
+          <div id="quadrant_xminymin_wrap" class="label quadwrap" style="right: 50%; top: 50%"><div id="quadrant_xminymin" class="editableelem quadinner alignright">xminymin</div></div>
           <div id="quadrant_xmaxymin_wrap" class="label quadwrap" style="left: 50%; top: 50%"><div id="quadrant_xmaxymin" class="editableelem quadinner alignleft">xmaxymin</div></div>
-          <div id="quadrant_xminymax_wrap" class="label quadwrap" style="left: 0%; top: 0%"><div id="quadrant_xminymax" class="editableelem quadinner alignright">xminymax</div></div>
-          <div id="quadrant_xmaxymax_wrap" class="label quadwrap" style="left: 50%; top: 0%"><div id="quadrant_xmaxymax" class="editableelem quadinner alignleft">xmaxymax</div></div>
+          <div id="quadrant_xminymax_wrap" class="label quadwrap" style="right: 50%; bottom: 50%"><div id="quadrant_xminymax" class="editableelem quadinner alignright">xminymax</div></div>
+          <div id="quadrant_xmaxymax_wrap" class="label quadwrap" style="left: 50%; bottom: 50%"><div id="quadrant_xmaxymax" class="editableelem quadinner alignleft">xmaxymax</div></div>
         </div>
       </div>
       <button id="saveas">Save as a link</button>
@@ -35,6 +35,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/jquery.editable.js"></script>
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/x-editableelem/1.5.1/jqueryui-editable/js/jqueryui-editable.min.js"></script>-->
+    <script src="js/html2canvas.min.js"></script>
     <script src="js/main.js"></script>
 
 	</body>

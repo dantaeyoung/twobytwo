@@ -4,9 +4,12 @@ $lightblue: #A2D5ED;
 $lightgrey: #C0C0C0;
 
 $buttonbc: cyan;
-$backgc: white;
 $highlightcolor: lighten(#66def4, 2%);
+
+$backgc: white;
 $textcolor: lighten(black, 10%);
+$gridback: $backgc;
+$gridtext: lighten(black, 10%);
 
 html {
   background: $backgc;
@@ -20,13 +23,14 @@ body {
 
 
 #wrapper {
+ background-color: $backgc;
  display: flex;
  flex-direction: column;
  align-items: center;
  vertical-align: middle;	
  justify-content: center;
  height: 100vh;
- width: 100vw;
+ width: 100%;
 }
 
 button {
@@ -73,16 +77,24 @@ button {
   }
 }
 
-$tbtpad: 40vmin;
+$tbtpad: 35vmin;
 
 #twobytwo_wrapper {
   width: calc(95vmin - #{$tbtpad});
   height: calc(95vmin - #{$tbtpad});
-  border: 1px dotted blue;
+  border: 3px solid black;
+  border-radius: 1px;
+  background-color: $gridback;
   padding: calc(#{$tbtpad} / 2);
+  @media screen and (min-width: 500px) {
+    max-width: 35vmin !important;
+    max-height: 35vmin !important;
+  }
 }
 
 #grid {
+  font-size: calc(0.5em + 1vmin);
+
   width: 100%;
   height: 100%;
   position: relative;
@@ -94,12 +106,14 @@ $tbtpad: 40vmin;
     top: 5%;
     width: 90%;
     height: 90%;
-    background: url('../assets/two_by_two_arrows.svg') no-repeat;
+
+		& img {
+		}
   }
 
   .label {
-    font-weight: 700 !important;
-    color:  $textcolor !important;
+    font-weight: 700;
+    color:  $gridtext;
     position: absolute;
 		line-height: 1.1em;
     overflow-wrap: break-word;
@@ -157,18 +171,18 @@ textarea.editable {
   margin: 0px;
   position: relative;
   font-family: 'Dosis', sans-serif;
-  font-weight: 700;
+  font-weight: inherit;
   background-color : #FFA;
   padding : 3px;
 }
 
-$qlpad: 3vmin;
+$qlpad: 8vmin;
 
 .quadwrap {
-	border: 1px dotted red;
-  margin: -1px;
+  font-weight: 500 !important;
+  color:  $textcolor;
 	padding: calc(#{$qlpad} / 2 );
-  height: calc(50% - (#{$qlpad}));
+  height: calc(50% - (#{$qlpad} * 2));
   width: calc(50% - (#{$qlpad}));
   position: relative;
   display: flex;
