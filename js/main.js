@@ -1,7 +1,5 @@
-var questionData = {};
-var rensis;
 
-var getUrlValue = function(VarSearch){
+function getUrlValue(VarSearch){
     var SearchString = window.location.search.substring(1);
     var VariableArray = SearchString.split('&');
     for(var i = 0; i < VariableArray.length; i++){
@@ -21,17 +19,6 @@ function updateUrlWithData() {
   history.replaceState('', '', url + "?" +  $.param(savedata));
 }
 
-//Creating dynamic link that automatically click
-function downloadURI(uri, name) {
-    var link = document.createElement("a");
-    link.download = name;
-    link.href = uri;
-    link.click();
-    //after creating link you should delete dynamic link
-    //clearDynamicLink(link); 
-}
-
-//Your modified code.
 function saveAsImage(div, filename) {
     html2canvas(div, {
         dpi: 300,
@@ -51,12 +38,12 @@ $(function() {
       el.innerHTML = decodeURIComponent(getUrlValue(el.id));
     }
   });
+
   $(".editableelem").each(function(i, el) {
     $(el).editable({type: "textarea", action: "click"}, function(e){
       updateUrlWithData()
     });
   });
-
 
 
   $("button#saveas").click(function() {
