@@ -49,6 +49,7 @@ html {
 
 body {
   font-family: 'n-bold', 'Dosis', sans-serif;
+  letter-spacing: -0.02em;
   margin: 0;
   padding: 0; }
 
@@ -135,8 +136,11 @@ button {
     line-height: 1.1em;
     overflow-wrap: break-word; }
 
-.axislabel.xaxis {
-  width: calc((35vmin / 2) - 1vmin); }
+.axislabel {
+  font-family: 'n-book', 'Dosis', sans-serif;
+  font-weight: 400 !important; }
+  .axislabel.xaxis {
+    width: calc((35vmin / 2) - 1vmin); }
 
 .alignleft {
   text-align: left; }
@@ -177,8 +181,7 @@ textarea.editable {
   text-align: inherit; }
 
 .quadwrap {
-  font-family: 'n-book';
-  font-weight: 500 !important;
+  font-family: 'n-bold', 'Dosis', sans-serif;
   color: #1a1a1a;
   padding: calc(8vmin / 2 );
   height: calc(50% - (8vmin * 2));
@@ -186,7 +189,8 @@ textarea.editable {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  text-transform: uppercase; }
 
 .quadinner {
   width: 100%; }

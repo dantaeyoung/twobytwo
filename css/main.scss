@@ -20,6 +20,7 @@ html {
 
 body {
   font-family: 'n-bold', 'Dosis', sans-serif;
+	letter-spacing: -0.02em;
   margin: 0;
   padding: 0;
 }
@@ -133,6 +134,8 @@ $tbtpad: 35vmin;
 }
 
 .axislabel {
+  font-family: 'n-book', 'Dosis', sans-serif;
+  font-weight: 400 !important;
 
   &.xaxis {
     width: calc((#{$tbtpad} / 2) - 1vmin);
@@ -189,8 +192,7 @@ textarea.editable {
 $qlpad: 8vmin;
 
 .quadwrap {
-	font-family: 'n-book';
-  font-weight: 500 !important;
+  font-family: 'n-bold', 'Dosis', sans-serif;
   color:  $textcolor;
 	padding: calc(#{$qlpad} / 2 );
   height: calc(50% - (#{$qlpad} * 2));
@@ -199,6 +201,7 @@ $qlpad: 8vmin;
   display: flex;
   align-items: center;
   justify-content: center;
+	text-transform: uppercase;
 }
 
 .quadinner {
