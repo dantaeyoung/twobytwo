@@ -13,3 +13,5 @@ https://dantaeyoung.github.io/twobytwo
 - Url is automatically updated.
 - Click 'Download Image' button to..... download an image.
 - Click 'Copy URL' to copy diagram 
+
+Feel free to add to https://www.are.na/dan-taeyoung/two-by-twos !
