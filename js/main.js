@@ -12,7 +12,7 @@ var getUrlValue = function(VarSearch){
     }
 }
 
-function saveDataToUrl() {
+function updateUrlWithData() {
 	var savedata = {};
 	$(".editableelem").each(function(i, el) {
 		savedata[el.id] = el.innerHTML;
@@ -32,15 +32,13 @@ function downloadURI(uri, name) {
 }
 
 //Your modified code.
-function printToFile(div) {
+function saveAsImage(div, filename) {
 		html2canvas(div, {
 				dpi: 300,
 				onrendered: function (canvas) {
-						var myImage = canvas.toDataURL("image/png");
-						//create your own dialog with warning before saving file
-						//beforeDownloadReadMessage();
-						//Then download file
-						downloadURI("data:" + myImage, "yourImage.png");
+          canvas.toBlob(function(blob) {
+            saveAs(blob, filename);
+          });
 				}
 		});
 }
@@ -55,14 +53,15 @@ $(function() {
 	});
 	$(".editableelem").each(function(i, el) {
 		$(el).editable({type: "textarea", action: "click"}, function(e){
-		  saveDataToUrl()
+		  updateUrlWithData()
 		});
 	});
 
 
 
   $("button#saveas").click(function() {
-		printToFile($("#twobytwo_wrapper"));
+    var filename = $("#quiz_title").html().replace(/[^a-z0-9]/gi, '_').toLowerCase();
+		saveAsImage($("#twobytwo_wrapper"), filename);
   })	
 
 });
