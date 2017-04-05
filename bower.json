@@ -19,7 +19,7 @@
     "jquery": "^3.2.1",
     "file-saver": "FileSaver#^1.3.3",
     "html2canvas": "https://github.com/eKoopmans/html2canvas.git#c903e6fb348fec7db253481c16e811cb55f124f0",
-    "jQuery.editable": "jquery.editable#^1.1.2",
+    "jQuery.editable": "https://github.com/jordanthomp81/jQuery.editable.git#78e9433ed7317ee5b4b5cf0afabbd4594c5d258e",
     "canvas-toBlob": "https://github.com/eligrey/canvas-toBlob.js.git"
   }
 }

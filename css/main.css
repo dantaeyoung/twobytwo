@@ -189,9 +189,8 @@ textarea.editable {
 .quadwrap {
   font-family: 'Neuzeit-Heavy', Arial, sans-serif;
   color: #1a1a1a;
-  padding: calc(8vmin / 2 );
-  height: calc(50% - (8vmin * 2));
-  width: calc(50% - (8vmin));
+  height: 50%;
+  width: 50%;
   position: relative;
   display: flex;
   align-items: center;
@@ -199,4 +198,4 @@ textarea.editable {
   text-transform: uppercase; }
 
 .quadinner {
-  width: 100%; }
+  width: 80%; }

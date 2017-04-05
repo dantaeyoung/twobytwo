@@ -1,6 +1,5 @@
 {
   "name": "jQuery.editable",
-  "version": "1.1.2",
   "homepage": "https://github.com/shokai/jQuery.editable",
   "authors": [
     "shokai"
@@ -21,14 +20,13 @@
     "test",
     "tests"
   ],
-  "_release": "1.1.2",
+  "_release": "78e9433ed7",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.1.2",
-    "commit": "37975e699c999477779976eff8638b49da5a9861"
+    "type": "commit",
+    "commit": "78e9433ed7317ee5b4b5cf0afabbd4594c5d258e"
   },
-  "_source": "https://github.com/shokai/jQuery.editable.git",
-  "_target": "^1.1.2",
-  "_originalSource": "jquery.editable",
+  "_source": "https://github.com/jordanthomp81/jQuery.editable.git",
+  "_target": "78e9433ed7317ee5b4b5cf0afabbd4594c5d258e",
+  "_originalSource": "https://github.com/jordanthomp81/jQuery.editable.git",
   "_direct": true
 }

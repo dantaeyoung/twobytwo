@@ -196,9 +196,11 @@ $qlpad: 8vmin;
 .quadwrap {
   font-family: 'Neuzeit-Heavy', Arial, sans-serif;
   color:  $textcolor;
-	padding: calc(#{$qlpad} / 2 );
-  height: calc(50% - (#{$qlpad} * 2));
-  width: calc(50% - (#{$qlpad}));
+	//padding: calc(#{$qlpad} / 2 );
+  //height: calc(50% - (#{$qlpad} * 2));
+  //width: calc(50% - (#{$qlpad}));
+  height: 50%;
+  width: 50%;
   position: relative;
   display: flex;
   align-items: center;
@@ -207,7 +209,7 @@ $qlpad: 8vmin;
 }
 
 .quadinner {
-  width: 100%;
+  width: 80%;
 	//padding: 20px;
 	//position: absolute;
 }
