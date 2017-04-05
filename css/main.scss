@@ -6,8 +6,8 @@ $lightgrey: #C0C0C0;
 $buttonbc: cyan;
 $highlightcolor: lighten(#66def4, 2%);
 
-$backgc: lighten(black, 10%);
-$textcolor: white;
+$backgc: white;
+$textcolor: lighten(black, 10%);
 $gridback: white;
 $gridtext: lighten(black, 10%);
 
@@ -43,7 +43,7 @@ button {
   cursor: pointer;
   border-radius: 4px;
   background-color: lighten($lightgrey, 40%);
-  color: darken($backgc, 30%);
+  color: $textcolor;
   border-right: 2px solid darken($buttonbc, 30%);
   border-bottom: 2px solid darken($buttonbc, 30%);
 
@@ -88,12 +88,12 @@ $tbtpad: 35vmin;
 	position: relative;
   width: calc(95vmin - #{$tbtpad});
   height: calc(95vmin - #{$tbtpad});
-  border-radius: 10px;
+  border: 4px solid black;
   background-color: $gridback;
   padding: calc(#{$tbtpad} / 2);
   @media screen and (min-width: 500px) {
-    max-width: 35vmin !important;
-    max-height: 35vmin !important;
+    max-width: 50vmin !important;
+    max-height: 50vmin !important;
   }
 }
 
