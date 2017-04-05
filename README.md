@@ -12,3 +12,4 @@ https://dantaeyoung.github.io/twobytwo
 - Click text to edit.
 - Url is automatically updated.
 - Click 'Download Image' button to..... download an image.
+- Click 'Copy URL' to copy diagram 
