@@ -1,0 +1,37 @@
+{
+  "name": "jquery.boxfit",
+  "version": "1.2.4",
+  "homepage": "https://github.com/michikono/boxfit",
+  "authors": [
+    "Michi Kono <michikono@gmail.com>"
+  ],
+  "contributors": [
+    "Pawel Niewiadomski <11110000b@gmail.com> (http://twitter.com/devonsteroids)"
+  ],
+  "description": "Boxfit is a jQuery plugin for resizing text. It will scale text to fit inside a fixed width div.",
+  "main": "dist/jquery.boxfit.js",
+  "keywords": [
+    "fit",
+    "scale",
+    "resize"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "_release": "1.2.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.4",
+    "commit": "7486e37b6978f310d8b1e0e86115b3395e0d663b"
+  },
+  "_source": "https://github.com/michikono/boxfit.git",
+  "_target": "^1.2.4",
+  "_originalSource": "jquery.boxfit",
+  "_direct": true
+}

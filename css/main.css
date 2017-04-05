@@ -181,6 +181,7 @@ textarea.editable {
   position: relative;
   font-family: inherit;
   font-weight: inherit;
+  text-transform: inherit;
   background-color: #FFA;
   padding: 3px;
   text-align: inherit; }
