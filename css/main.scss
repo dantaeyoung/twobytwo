@@ -39,8 +39,17 @@ body {
  width: 100%;
 }
 
+#buttons {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+
+	& * {
+		margin: 5px 10px;
+	}
+	
+}
 button {
-  margin: 20px;
   text-align: center;
   padding: 10px;
   border: none;
@@ -210,7 +219,7 @@ $qlpad: 8vmin;
 
 .quadinner {
   width: 80%;
-  padding: 30px;
+  padding: calc(0.75em + 1.5vmin);
   position: absolute;
 }
 

@@ -61,6 +61,12 @@ $(function() {
     });
   });
 
+  new Clipboard("#copyurl", {
+    text: function(trigger) {
+      return location.href;
+    }
+  });
+
 
   $("button#saveas").click(function() {
     var filename = $("#quiz_title").html().replace(/[^a-z0-9]/gi, '_').toLowerCase();
