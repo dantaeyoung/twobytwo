@@ -69,6 +69,19 @@ $(function() {
     }
   });
 
+  $("#colortoggle").click(function() {
+    var tw = $("#twobytwo_wrapper");
+    if($(this).hasClass("pressed")) {
+      $("#wrapper").css('background', newGradient());
+      tw.css('background', tw.data("old-background"));
+    } else {
+      $("#wrapper").css('background', '');
+      tw.data("old-background", tw.css('background'));
+      tw.css('background', newGradient());
+    }
+    $(this).toggleClass("pressed");
+  });
+
 
   $("button#saveas").click(function() {
     var filename = $("#quiz_title").html().replace(/[^a-z0-9]/gi, '_').toLowerCase();

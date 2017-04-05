@@ -84,7 +84,7 @@ button {
   color: #1a1a1a;
   border-right: 2px solid #006666;
   border-bottom: 2px solid #006666; }
-  button:active {
+  button:active, button.pressed {
     border-left: 2px solid #5a5a5a;
     border-top: 2px solid #5a5a5a;
     border-right: none;

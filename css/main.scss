@@ -62,7 +62,7 @@ button {
   border-right: 2px solid darken($buttonbc, 30%);
   border-bottom: 2px solid darken($buttonbc, 30%);
 
-  &:active {
+  &:active,&.pressed {
     border-left: 2px solid darken($lightgrey, 40%);
     border-top: 2px solid darken($lightgrey, 40%);
     border-right: none;
@@ -72,6 +72,8 @@ button {
   }
 }
 
+#colortoggle {
+}
 
 .quiz_header {
   font-size: calc(0.5em + 1vmin);
