@@ -1,10 +1,13 @@
 @import "reset";
 @import "fonts";
 
+
 $purple: purple;
 $pink: pink;
 $lightblue: #A2D5ED;
 $lightgrey: #C0C0C0;
+$fuschia: #d55fe8;
+$teal: #31B7D7; 
 
 $buttonbc: cyan;
 $highlightcolor: lighten(#66def4, 2%);
@@ -15,25 +18,22 @@ $gridback: white;
 $gridtext: lighten(black, 10%);
 
 html {
-  background: $backgc;
 }
 
 body {
   font-family: 'Neuzeit-Book', Arial, sans-serif;
-	@media only screen and (max-device-width: 480px) {
-		letter-spacing: -0.03em;
-	}
+  @media only screen and (max-device-width: 480px) {
+    letter-spacing: -0.03em;
+  }
   margin: 0;
   padding: 0;
 }
 
-
 #wrapper {
- background-color: $backgc;
  display: flex;
  flex-direction: column;
  align-items: center;
- vertical-align: middle;	
+ vertical-align: middle;  
  justify-content: center;
  height: 100vh;
  width: 100%;
@@ -67,10 +67,10 @@ button {
 .quiz_header {
   font-size: calc(0.5em + 1vmin);
 
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   padding: 5vmin 0px;
 
   text-align: center;
@@ -91,9 +91,9 @@ button {
 $tbtpad: 35vmin;
 
 #twobytwo_wrapper {
-	position: relative;
-  width: calc(95vmin - #{$tbtpad});
-  height: calc(95vmin - #{$tbtpad});
+  position: relative;
+  width: calc(94vmin - #{$tbtpad});
+  height: calc(94vmin - #{$tbtpad});
   border: 4px solid black;
   background-color: $gridback;
   padding: calc(#{$tbtpad} / 2);
@@ -110,7 +110,7 @@ $tbtpad: 35vmin;
   height: 100%;
   position: relative;
   border-radius: 10px;
-	margin-top: 6vmin;
+  margin-top: 6vmin;
 
   & #gridgraphic {
     position: absolute;
@@ -119,17 +119,17 @@ $tbtpad: 35vmin;
     width: 90%;
     height: 90%;
 
-		& img {
-			width: 100%;
-			height: 100%;
-		}
+    & img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .label {
     font-weight: 700;
     color:  $gridtext;
     position: absolute;
-		line-height: 1.1em;
+    line-height: 1.1em;
     overflow-wrap: break-word;
   }
 
@@ -144,40 +144,40 @@ $tbtpad: 35vmin;
 }
 
 .alignleft {
-	text-align: left;
-	& textarea {
-		top: -3px;
-		left: -5px;
-	}
+  text-align: left;
+  & textarea {
+    top: -3px;
+    left: -5px;
+  }
 }
 
 .alignright {
-	text-align: right;
-	 & textarea  {
-		top: -3px;
-		right: -9px;
-	}
+  text-align: right;
+   & textarea  {
+    top: -3px;
+    right: -9px;
+  }
 }
 .alignvcenter {
-	height: 100%;
-	margin-top: -50%;
-	display: flex;
+  height: 100%;
+  margin-top: -50%;
+  display: flex;
   flex-direction: column;
-	vertical-align: middle;	
+  vertical-align: middle; 
   justify-content: center;
 }
 
 .alignhcenter {
-	text-align: center;
+  text-align: center;
 
-	&.axislabel {
-		width: 100%;
-		margin-left: -50%;
-		& textarea  {
-			top: -3px;
-			center: -9px;
-		}
-	}
+  &.axislabel {
+    width: 100%;
+    margin-left: -50%;
+    & textarea  {
+      top: -3px;
+      center: -9px;
+    }
+  }
 } 
 
 textarea.editable {
@@ -185,10 +185,10 @@ textarea.editable {
   position: relative;
   font-family: inherit;
   font-weight: inherit;
-	text-transform: inherit;
+  text-transform: inherit;
   background-color : #FFA;
   padding : 3px;
-	text-align: inherit;
+  text-align: inherit;
 }
 
 $qlpad: 8vmin;
@@ -196,7 +196,7 @@ $qlpad: 8vmin;
 .quadwrap {
   font-family: 'Neuzeit-Heavy', Arial, sans-serif;
   color:  $textcolor;
-	//padding: calc(#{$qlpad} / 2 );
+  //padding: calc(#{$qlpad} / 2 );
   //height: calc(50% - (#{$qlpad} * 2));
   //width: calc(50% - (#{$qlpad}));
   height: 50%;
@@ -205,7 +205,7 @@ $qlpad: 8vmin;
   display: flex;
   align-items: center;
   justify-content: center;
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .quadinner {

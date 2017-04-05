@@ -30,20 +30,24 @@ function saveAsImage(div, filename) {
     });
 }
 
-function getCenter(el) {
-  var $this = $(el);
-  var offset = $this.offset();
-  var width = $this.width();
-  var height = $this.height();
-
-  var centerX = offset.left + width / 2;
-  var centerY = offset.top + height / 2;
-  return { x: centerX, y: centerY };
+function randRange(min , max) {
+  return Math.floor(Math.random()*(max-min+1)+min);
 }
 
-window.gc = getCenter;
+function randPastel() {
+  var hue = Math.floor(Math.random() * 360);
+  var pastel = 'hsl(' + hue + ', 100%, 85.5%)';
+  return pastel;
+}
+
+function newGradient() {
+  var s = "linear-gradient(" + Math.round(randRange(0, 180)) + "deg, " + randPastel() + " 0%, " + randPastel() + " 100%)";
+  return s;
+}
 
 $(function() {
+
+  $("#wrapper").css('background', newGradient());
 
   $(".editableelem").each(function(i, el) {
     if(getUrlValue(el.id) != undefined) {
@@ -61,6 +65,7 @@ $(function() {
   $("button#saveas").click(function() {
     var filename = $("#quiz_title").html().replace(/[^a-z0-9]/gi, '_').toLowerCase();
     saveAsImage($("#twobytwo_wrapper"), filename);
+    $("#wrapper").css('background', newGradient());
   })  
 
 });
