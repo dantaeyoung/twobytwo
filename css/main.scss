@@ -1,3 +1,6 @@
+@import "reset";
+@import "fonts";
+
 $purple: purple;
 $pink: pink;
 $lightblue: #A2D5ED;
@@ -16,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'n-bold', 'Dosis', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -176,7 +179,7 @@ $tbtpad: 35vmin;
 textarea.editable {
   margin: 0px;
   position: relative;
-  font-family: 'Dosis', sans-serif;
+  font-family: inherit;
   font-weight: inherit;
   background-color : #FFA;
   padding : 3px;
@@ -186,6 +189,7 @@ textarea.editable {
 $qlpad: 8vmin;
 
 .quadwrap {
+	font-family: 'n-book';
   font-weight: 500 !important;
   color:  $textcolor;
 	padding: calc(#{$qlpad} / 2 );
