@@ -15,3 +15,6 @@ https://dantaeyoung.github.io/twobytwo
 - Click 'Copy URL' to copy diagram 
 
 Feel free to add to https://www.are.na/dan-taeyoung/two-by-twos !
+
+# Todo:
+- [ ] a button that converts layout to Greimas's [semiotic square](https://en.wikipedia.org/wiki/Semiotic_square)
