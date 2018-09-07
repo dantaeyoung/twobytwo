@@ -24,6 +24,7 @@
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.3.1",
     "jquery-jeditable": "^2.0.6",
-    "jquery.boxfit": "git+https://github.com/michikono/boxfit.git"
+    "jquery.boxfit": "git+https://github.com/michikono/boxfit.git",
+    "js-base64": "^2.4.9"
   }
 }

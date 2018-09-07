@@ -3,7 +3,9 @@ var html2canvas = require('html2canvas');
 var FileSaver = require('FileSaver');
 require('canvas-toBlob');
 var Clipboard = require('clipboard');
-require('jquery-jeditable');
+require('./jquery.editable');
+var Base64 = require('js-base64').Base64;
+
 
 function getUrlValue(VarSearch){
     var SearchString = window.location.search.substring(1);
@@ -22,6 +24,7 @@ function updateUrlWithData() {
     savedata[el.id] = el.innerHTML;
   });
   var url = location.protocol + '//' + location.host + location.pathname;
+//  var dataUrl = url + "?data=" +  Base64.encode($.param(savedata));
   var dataUrl = url + "?" +  $.param(savedata);
   history.replaceState('', '', dataUrl);
   return dataUrl;
@@ -64,9 +67,9 @@ $(function() {
   });
 
   $(".editableelem").each(function(i, el) {
-    $(el).editable(function(value, settings){
+    $(el).editable({type: "textarea", action: "click"}, function(e){
       updateUrlWithData()
-    }, { type: 'textarea', cssclass: 'editing' });
+    });
   });
 
   new Clipboard("#copyurl", {
