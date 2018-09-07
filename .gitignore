@@ -3,3 +3,6 @@
 config.codekit
 node_modules
 js/min
+dist/
+.cache
+package-lock.json

@@ -1,0 +1,29 @@
+{
+  "name": "twobytwo",
+  "version": "1.0.0",
+  "description": "#### twobytwo helps generate your very own Two-by-Two diagrams. (mostly meant to work on mobile so I can generate them on the fly, whenever inspiration strikes)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dantaeyoung/twobytwo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dantaeyoung/twobytwo/issues"
+  },
+  "homepage": "https://github.com/dantaeyoung/twobytwo#readme",
+  "dependencies": {
+    "FileSaver": "^0.10.0",
+    "canvas-toBlob": "^1.0.0",
+    "clipboard": "^2.0.1",
+    "file-saver": "^1.3.8",
+    "html2canvas": "^1.0.0-alpha.12",
+    "jquery": "^3.3.1",
+    "jquery-jeditable": "^2.0.6",
+    "jquery.boxfit": "git+https://github.com/michikono/boxfit.git"
+  }
+}

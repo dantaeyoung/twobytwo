@@ -1,3 +1,9 @@
+var jquery = $ = jQuery = require('jquery');
+var html2canvas = require('html2canvas');
+var FileSaver = require('FileSaver');
+require('canvas-toBlob');
+var Clipboard = require('clipboard');
+require('jquery-jeditable');
 
 function getUrlValue(VarSearch){
     var SearchString = window.location.search.substring(1);
@@ -58,9 +64,9 @@ $(function() {
   });
 
   $(".editableelem").each(function(i, el) {
-    $(el).editable({type: "textarea", action: "click"}, function(e){
+    $(el).editable(function(value, settings){
       updateUrlWithData()
-    });
+    }, { type: 'textarea', cssclass: 'editing' });
   });
 
   new Clipboard("#copyurl", {

@@ -140,7 +140,7 @@ button {
     #grid #gridgraphic img {
       width: 100%;
       height: 100%; }
-  #grid .label {
+  #grid .label, .editing * {
     font-weight: 700;
     color: #1a1a1a;
     position: absolute;
@@ -181,7 +181,7 @@ button {
       top: -3px;
       center: -9px; }
 
-textarea.editable {
+.editable {
   margin: 0px;
   position: relative;
   font-family: inherit;
@@ -190,6 +190,7 @@ textarea.editable {
   background-color: #FFA;
   padding: 3px;
   text-align: inherit; }
+
 
 .quadwrap {
   font-family: 'Neuzeit-Heavy', Arial, sans-serif;
