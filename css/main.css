@@ -268,7 +268,7 @@ button {
 #gallery-tab {
   padding-top: 70px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+  padding-bottom: 40px; }
 
 /* Gallery Styles */
 .gallery-header {
@@ -289,6 +289,13 @@ button {
     .gallery-header a:hover {
       color: white;
       border-bottom-color: white; }
+  @media screen and (max-width: 600px) {
+    .gallery-header {
+      padding: 20px 15px; }
+    .gallery-header h1 {
+      font-size: 1.8em; }
+    .gallery-header p {
+      font-size: 1em; } }
 
 .gallery-grid {
   display: grid;
@@ -302,6 +309,11 @@ button {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 15px;
       padding: 15px; } }
+  @media screen and (max-width: 600px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 10px; } }
 
 .gallery-item {
   background-color: white;
