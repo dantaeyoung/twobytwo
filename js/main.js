@@ -69,9 +69,15 @@ function setupTabs() {
     $(".tab-content").removeClass("active");
     $("#" + tabName + "-tab").addClass("active");
 
-    // Load gallery if switching to gallery tab
-    if (tabName === "gallery" && !window.galleryLoaded) {
-      loadGallery();
+    // Apply gradient backgrounds
+    if (tabName === "generator") {
+      $("#wrapper").css('background', newGradient());
+    } else if (tabName === "gallery") {
+      $("#gallery-tab").css('background', newGradient());
+      // Load gallery if switching to gallery tab
+      if (!window.galleryLoaded) {
+        loadGallery();
+      }
     }
   });
 }
@@ -130,6 +136,7 @@ $(function() {
   setupTabs();
 
   $("#wrapper").css('background', newGradient());
+  $("#gallery-tab").css('background', newGradient());
 
   $(".editableelem").each(function(i, el) {
     if(getUrlValue(el.id) != undefined) {
