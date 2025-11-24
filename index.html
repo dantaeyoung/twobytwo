@@ -8,7 +8,12 @@
     <title>TwoByTwo Generator</title>
   </head>
   <body>
+    <div id="tab-navigation">
+      <button class="tab-button active" data-tab="generator">Generator</button>
+      <button class="tab-button" data-tab="gallery">Gallery</button>
+    </div>
     <div id="wrapper">
+      <div id="generator-tab" class="tab-content active">
       <div id = "twobytwo_wrapper">
         <div class="quiz_header">
           <div id="quiz_title" class="editableelem alignhcenter">Two by Two Generator</div>
@@ -32,6 +37,17 @@
         <button id="copyurl">Copy URL to clipboard</button>
         <button id="colortoggle" class="toggle">I like color</button>
       </div>
+      </div><!-- end generator-tab -->
+
+      <div id="gallery-tab" class="tab-content">
+        <div class="gallery-header">
+          <h1>Two-by-Two Gallery</h1>
+          <p>Examples from <a href="https://www.are.na/dan-taeyoung/two-by-twos" target="_blank">Are.na</a></p>
+        </div>
+        <div id="gallery-grid" class="gallery-grid">
+          <div class="loading">Loading gallery...</div>
+        </div>
+      </div><!-- end gallery-tab -->
     </div>
 
     <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
