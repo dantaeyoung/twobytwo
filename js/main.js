@@ -56,7 +56,78 @@ function newGradient() {
   return s;
 }
 
+// Tab switching functionality
+function setupTabs() {
+  $(".tab-button").on("click", function() {
+    const tabName = $(this).data("tab");
+
+    // Update button states
+    $(".tab-button").removeClass("active");
+    $(this).addClass("active");
+
+    // Update content visibility
+    $(".tab-content").removeClass("active");
+    $("#" + tabName + "-tab").addClass("active");
+
+    // Load gallery if switching to gallery tab
+    if (tabName === "gallery" && !window.galleryLoaded) {
+      loadGallery();
+    }
+  });
+}
+
+// Fetch and display gallery from Are.na
+function loadGallery() {
+  const apiUrl = "https://api.are.na/v2/channels/two-by-twos/contents";
+  const galleryGrid = $("#gallery-grid");
+
+  $.ajax({
+    url: apiUrl,
+    method: "GET",
+    success: function(data) {
+      galleryGrid.empty();
+
+      if (!data.contents || data.contents.length === 0) {
+        galleryGrid.html('<div class="error">No images found in the gallery.</div>');
+        return;
+      }
+
+      // Filter for image blocks only
+      const images = data.contents.filter(block => block.class === "Image");
+
+      images.forEach(function(block) {
+        const imageUrl = block.image.display.url || block.image.large.url;
+        const title = block.title || block.generated_title || "Untitled";
+
+        const galleryItem = $('<div class="gallery-item"></div>');
+        const img = $('<img>').attr('src', imageUrl).attr('alt', title);
+        const titleDiv = $('<div class="item-title"></div>').text(title);
+
+        galleryItem.append(img);
+        galleryItem.append(titleDiv);
+
+        // Open Are.na link on click
+        if (block.source && block.source.url) {
+          galleryItem.on('click', function() {
+            window.open(block.source.url, '_blank');
+          });
+        }
+
+        galleryGrid.append(galleryItem);
+      });
+
+      window.galleryLoaded = true;
+    },
+    error: function(xhr, status, error) {
+      console.error("Error loading gallery:", error);
+      galleryGrid.html('<div class="error">Failed to load gallery. Please try again later.</div>');
+    }
+  });
+}
+
 $(function() {
+
+  setupTabs();
 
   $("#wrapper").css('background', newGradient());
 
